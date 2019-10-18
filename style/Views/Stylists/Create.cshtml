@@ -1,0 +1,29 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Style.Models.Stylist
+
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.StylistId, new {@class = "hidden"})
+
+  <div class="submit-table">
+    <div class="table-head">
+      <p>Add a Stylist</p>
+    </div>
+    <table>
+        <td>@Html.LabelFor(model => model.Name)</td>
+        <td>@Html.TextBoxFor(model => model.Name, new { @class = "form-control form-input" })</td>
+      <tr>
+      </tr>
+        <td>@Html.LabelFor(model => model.Specialty)</td>
+        <td>@Html.TextBoxFor(model => model.Specialty, new { @class = "form-control form-input" })</td>
+      <tr>
+        <td></td>
+        <td><input class="button btn-dark" type="submit" value="Submit"/></td>
+      </tr>
+    </table class="form-group">
+  </div>
+}

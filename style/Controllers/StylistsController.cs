@@ -28,10 +28,13 @@ namespace Style.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Stylist ET)
+        public ActionResult Create(Stylist stylist)
         {
-            _db.Stylists.Add(ET);
-            _db.SaveChanges();
+            if (stylist.Name != null)
+            {
+                _db.Stylists.Add(stylist);
+                _db.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
         
