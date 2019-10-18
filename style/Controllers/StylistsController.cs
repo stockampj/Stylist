@@ -38,10 +38,10 @@ namespace Style.Controllers
             return RedirectToAction("Index");
         }
         
-        public ActionResult Details(int id)
+        public ActionResult Show(int id)
         {
-            Stylist et = _db.Stylists.Include(e => e.Clients).FirstOrDefault(e => e.StylistId == id);
-            return View(et);        
+            Stylist stylist = _db.Stylists.Include(s => s.Clients).FirstOrDefault(s => s.StylistId == id);
+            return View(stylist);        
         }
 
         public ActionResult Edit(int id)
@@ -53,6 +53,14 @@ namespace Style.Controllers
         public ActionResult Edit(Stylist ET)
         {
             _db.Entry(ET).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+            _db.Stylists.Remove(thisStylist);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
