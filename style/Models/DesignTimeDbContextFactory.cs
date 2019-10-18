@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Style.Models
 {
-  public class StyleFactory : IDesignTimeDbContextFactory<StyleContext>
+  public class StyleContextFactory : IDesignTimeDbContextFactory<StyleContext>
   {
 
     StyleContext IDesignTimeDbContextFactory<StyleContext>.CreateDbContext(string[] args)

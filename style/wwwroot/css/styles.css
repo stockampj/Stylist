@@ -21,3 +21,8 @@ div#navbar {
 #navbar-spacer {
   height: 80px;
 }
+
+body {
+  background-image: url(../img/lights.jpg);
+  background-position-x: center;
+}

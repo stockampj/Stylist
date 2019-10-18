@@ -11,7 +11,7 @@ using System;
 namespace Style.Models
 {
 
-    public class Attraction
+    public class Client
     {
         public int ClientId { get; set; }
         public string Name_First { get; set; }

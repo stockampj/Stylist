@@ -37,7 +37,7 @@ namespace Style.Controllers
         
         public ActionResult Details(int id)
         {
-            Stylist et = _db.Stylists.Include(e => e.Attractions).FirstOrDefault(e => e.StylistId == id);
+            Stylist et = _db.Stylists.Include(e => e.Clients).FirstOrDefault(e => e.StylistId == id);
             return View(et);        
         }
 
