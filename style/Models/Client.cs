@@ -1,0 +1,23 @@
+using Microsoft.AspNetCore.Mvc;
+using Style.Models;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+
+
+
+namespace Style.Models
+{
+
+    public class Attraction
+    {
+        public int ClientId { get; set; }
+        public string Name_First { get; set; }
+        public string Name_Last { get ; set; }
+        public string Phone { get; set; }
+        public int StylistId { get; set; }
+        public virtual Stylist Stylist { get; set; }
+    }
+}
