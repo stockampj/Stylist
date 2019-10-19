@@ -2,3 +2,41 @@
     Layout = "_Layout";
 }
 
+  
+@{
+    Layout = "_Layout";
+}
+@model Style.Models.Client
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ClientId)
+
+  <div class="submit-table">
+    <div class="table-head">
+      <p>Edit Stylist</p>
+    </div>
+    <table>
+      <tr>
+        <td>@Html.LabelFor(model => model.Name_First)</td>
+        <td>@Html.EditorFor(model => model.Name_First, new { htmlAttributes = new { @class = "form-control form-input " } })</td>
+      </tr>
+      <tr>
+        <td>@Html.LabelFor(model => model.Name_Last)</td>
+        <td>@Html.EditorFor(model => model.Name_Last, new { htmlAttributes = new { @class = "form-control form-input" } })</td>
+      </tr>
+      <tr>
+        <td>@Html.LabelFor(model => model.Phone)</td>
+        <td>@Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control form-input" } })</td>
+      </tr>
+      <tr>
+        <td>@Html.LabelFor(model => model.Stylist)</td>
+        <td>@Html.DropDownList("StylistId")</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input class="button btn-dark" type="submit" value="Submit"/></td>
+      </tr>
+    </table class="form-group">
+  </div>
+}

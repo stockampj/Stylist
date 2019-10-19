@@ -9,37 +9,41 @@
 
 @model Style.Models.Client
 
-<h4>Add a new Client</h4>
-
-@using(Html.BeginForm())
+@if (ViewBag.NoStylistErrorMessage != "")
 {
-  @Html.HiddenFor(model => model.StylistId, new {@class = "hidden"})
+    <p>@ViewBag.NoStylistErrorMessage</p>;
+}
+else
+{
+    @using(Html.BeginForm())
+    {
 
-  <div class="submit-table">
-    <div class="table-head">
-      <p>Add a Stylist</p>
+    <div class="submit-table">
+        <div class="table-head">
+        <p>Add a Client</p>
+        </div>
+        <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.Name_First)</td>
+            <td>@Html.TextBoxFor(model => model.Name_First, new { @class = "form-control form-input" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Name_Last)</td>
+            <td>@Html.TextBoxFor(model => model.Name_Last, new { @class = "form-control form-input" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Phone)</td>
+            <td>@Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-input" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Stylist)</td>
+            <td>@Html.DropDownList("StylistId")</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input class="button btn-dark" type="submit" value="Submit"/></td>
+        </tr>
+        </table class="form-group">
     </div>
-    <table>
-      <tr>
-        <td>@Html.LabelFor(model => model.Name_First)</td>
-        <td>@Html.TextBoxFor(model => model.Name_First, new { @class = "form-control form-input" })</td>
-      </tr>
-      <tr>
-        <td>@Html.LabelFor(model => model.Name_Last)</td>
-        <td>@Html.TextBoxFor(model => model.Name_Last, new { @class = "form-control form-input" })</td>
-      </tr>
-      <tr>
-        <td>@Html.LabelFor(model => model.Phone)</td>
-        <td>@Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-input" })</td>
-      </tr>
-      <tr>
-        <td>@Html.LabelFor(model => model.Stylist)</td>
-        <td>@Html.DropDownList("StylistId")</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><input class="button btn-dark" type="submit" value="Submit"/></td>
-      </tr>
-    </table class="form-group">
-  </div>
+    }
 }
