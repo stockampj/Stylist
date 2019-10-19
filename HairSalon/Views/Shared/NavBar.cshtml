@@ -1,12 +1,34 @@
+
 <div id="navbar">
-  <div class="row nav-holder">
-    @Html.ActionLink("Style Home", "Index", "Home", null, new {@class="nav-partial"})
-    <p class="nav-partial">|</p>
-    <p class="nav-partial">@Html.ActionLink("Stylists", "Index", "Stylists", null, new {@class="nav-partial"}) <i class="fas fa-list-ul"></i></p>
-    <p class="nav-partial">@Html.ActionLink("Clients", "Index", "Clients", null, new {@class="nav-partial"}) <i class="fas fa-list-ul"></i></p>    
-    <p class="nav-partial">|</p>
-    <p class="nav-partial">@Html.ActionLink("Stylist", "Create", "Stylists", null, new {@class="nav-partial"}) <i class="fas fa-plus-square"></i></p>
-    <p class="nav-partial">@Html.ActionLink("Client", "Create", "Clients", null, new {@class="nav-partial"}) <i class="fas fa-plus-square"></i></p>
+  <div class="row nav-holder">   
+
+
+    <p class="navbar-item">
+      <i class="fas fa-home"></i>
+      @Html.ActionLink("Salon Home", "Index", "Home", null, new {@class="navbarLink"})
+    </p>
+    
+    <p class="navbar-item">|</p>
+
+    <p class="navbar-item">
+      <i class="fas fa-list-ul"></i>
+      @Html.ActionLink("Stylists", "Index", "Stylists", null, new {@class="navbarLink"}) 
+    </p>
+    <p class="navbar-item">
+      <i class="fas fa-user-plus"></i>
+      @Html.ActionLink("Stylist", "Create", "Stylists", null, new {@class="navbarLink"})  
+    </p>
+
+    <p class="navbar-item">|</p>
+
+    <p class="navbar-item">
+      <i class="fas fa-list-ul"></i>
+      @Html.ActionLink("Clients", "Index", "Clients", null, new {@class="navbarLink"}) 
+    </p>
+    <p class="navbar-item">
+      <i class="fas fa-user-plus"></i>
+      @Html.ActionLink("Client", "Create", "Clients", null, new {@class="navbarLink"}) 
+    </p>
+    
   </div>
 </div>
-
