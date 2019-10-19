@@ -34,6 +34,11 @@ div#navbar {
 body {
   background-image: url(../img/lights.jpg);
   background-position-x: center;
+  font-family: 'Asap', sans-serif;
+}
+
+h1 {
+  font-family: 'Asap', sans-serif;
 }
 
 .table-head {
@@ -98,3 +103,4 @@ label {
   float: left;
   font-size: 2em;
 }
+
