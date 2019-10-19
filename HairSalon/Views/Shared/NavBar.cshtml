@@ -2,10 +2,11 @@
   <div class="row nav-holder">
     @Html.ActionLink("Style Home", "Index", "Home", null, new {@class="nav-partial"})
     <p class="nav-partial">|</p>
-    @Html.ActionLink("Stylists", "Index", "Stylists", null, new {@class="nav-partial"})
-    @Html.ActionLink("Clients", "Index", "Clients", null, new {@class="nav-partial"})
+    <p class="nav-partial">@Html.ActionLink("Stylists", "Index", "Stylists", null, new {@class="nav-partial"}) <i class="fas fa-list-ul"></i></p>
+    <p class="nav-partial">@Html.ActionLink("Clients", "Index", "Clients", null, new {@class="nav-partial"}) <i class="fas fa-list-ul"></i></p>    
     <p class="nav-partial">|</p>
-    @Html.ActionLink("Add Stylist", "Create", "Stylists", null, new {@class="nav-partial"})
-    @Html.ActionLink("Add Client", "Create", "Clients", null, new {@class="nav-partial"})
+    <p class="nav-partial">@Html.ActionLink("Stylist", "Create", "Stylists", null, new {@class="nav-partial"}) <i class="fas fa-plus-square"></i></p>
+    <p class="nav-partial">@Html.ActionLink("Client", "Create", "Clients", null, new {@class="nav-partial"}) <i class="fas fa-plus-square"></i></p>
   </div>
 </div>
+
