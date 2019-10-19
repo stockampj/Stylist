@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Style.Models;
+using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +8,7 @@ using System;
 
 
 
-namespace Style.Models
+namespace HairSalon.Models
 {
 
     public class Client

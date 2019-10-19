@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Styles.Migrations
+namespace HairSalon.Migrations
 {
     public partial class Initial : Migration
     {
