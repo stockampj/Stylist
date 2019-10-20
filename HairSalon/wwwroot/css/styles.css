@@ -16,7 +16,8 @@ div#navbar {
   min-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
+  overflow: hidden;
 }
 
 .navbar-item {
@@ -167,4 +168,10 @@ a:hover {
 
 .table-stylist {
   font-size: 1.5em;
+}
+
+.list-header {
+  float: right;
+  padding-right: 20px;
+  padding-bottom: 5px;
 }
