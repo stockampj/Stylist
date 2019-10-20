@@ -175,3 +175,12 @@ a:hover {
   padding-right: 20px;
   padding-bottom: 5px;
 }
+
+.error-message {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(71, 0, 0);
+}

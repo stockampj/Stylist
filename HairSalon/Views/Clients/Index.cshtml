@@ -33,6 +33,12 @@
             <p class="list-info">@client.Stylist.Name</p>
         </div>
     }
+    @if (ViewBag.ClientDependency != "")
+    {
+        <div class="error-message">
+            <p><i class="fas fa-exclamation-triangle"></i> @ViewBag.ClientDependency</p>
+        </div>
+    }
 </div>
 
 

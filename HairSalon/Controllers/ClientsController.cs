@@ -17,8 +17,13 @@ namespace HairSalon.Controllers
             _db = db;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string message)
         {
+            ViewBag.ClientDependency = "";
+            if (message == "client dependency")
+            {
+                ViewBag.ClientDependency = "You must reassign some clients before deleting this stylist";
+            }
             List<Client> clientlist = _db.Clients.Include(client => client.Stylist).ToList();
             return View(clientlist);
         }
