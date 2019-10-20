@@ -5,7 +5,7 @@
 @using HairSalon.Models
 @model List<HairSalon.Models.Client>
 
-<h1> Clients: </h1>
+<h1 class="Title-Font"> Clients</h1>
 
 <div class="list-view row">
 
@@ -23,10 +23,16 @@
     @foreach (Client client in Model)
     {
         <div class="list-view-col">
-            @Html.ActionLink($"{client.Name_First} {client.Name_Last}", "Show", new {id = client.ClientId})
+            <i class="fas fa-edit list-link"></i>
+            @Html.ActionLink($"{client.Name_First} {client.Name_Last}", "Edit", new {id = client.ClientId}, new {@class="list-link"})
         </div>
         <div class="list-view-col">
-            <p>@client.Stylist.Name</p>
+            <p class="list-info">@client.Phone</p>
+        </div>
+        <div class="list-view-col">
+            <p class="list-info">@client.Stylist.Name</p>
         </div>
     }
 </div>
+
+

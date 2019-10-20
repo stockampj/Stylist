@@ -5,22 +5,49 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;
 
-<h3>@Html.DisplayFor(model => model.Name)</h3>
-<h4>@Html.DisplayFor(model => model.Specialty)<h4>
-<ul>
-    @if (@Model.Clients.Count == 0)
-    {
-        <p>There are no clients for this Stylist</p>
-    }
+<div class="submit-table form-group">
+    <div class="stylist-head">
+        <p>@Html.DisplayFor(model => model.Name)</p>
+    </div>
+    <div class="table-body">
+        <div class="row">
+            <div class="table-label">
+                <label>Specialty:</label>
+            </div>
+            <div class="table-stylist">
+                @Html.DisplayFor(model => model.Specialty)
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-label">
+                <label>Clients:</label>
+            </div>
+            <div class="table-stylist">
+                    @if (@Model.Clients.Count == 0)
+                    {
+                        <p>There are no clients for this Stylist</p>
+                    }
 
-    @foreach (Client client in @Model.Clients)
-    {
-        <li>
-            Name: @(client.Name_First) @(client.Name_Last)
-        </li>
-    }
-</ul>
+                    @foreach (Client client in @Model.Clients)
+                    {
+                        <p>@(client.Name_First) @(client.Name_Last)</p>
+                    }
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-label"></div>
+            <div class="table-input">
+            @Html.ActionLink("Back", "Index", "Stylists", null, new {@class="btn btn-dark form-submit"}) 
+            @Html.ActionLink("Edit", "Edit", new { id = Model.StylistId }, new { @class="btn btn-warning form-submit"})
+            </div>
+      </div>
+    </div>
+</div>
 
-@Html.ActionLink("Edit",  "Edit", new {id = @Model.StylistId})
+      
+
+@Html.ActionLink("Edit", "Edit", "Stylists", new {id = @Model.StylistId})
 <br>
 @Html.ActionLink("Back to Stylists",  "Index")
+
+

@@ -37,18 +37,9 @@ namespace HairSalon.Controllers
         [HttpPost]
         public ActionResult Create(Client client)
         {
-            Console.WriteLine("StylistID: " + client.StylistId);
             _db.Clients.Add(client);
             _db.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        public ActionResult Show(int id)
-        {
-            Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
-            var thisStylist = _db.Stylists.FirstOrDefault(Stylist => Stylist.StylistId == thisClient.StylistId);
-            ViewBag.StylistName = thisStylist.Name;
-            return View(thisClient);
         }
 
         public ActionResult Edit(int id)
@@ -64,7 +55,7 @@ namespace HairSalon.Controllers
             _db.Entry(client).State = EntityState.Modified;
             _db.SaveChanges();
             
-            return RedirectToAction("Show", "Clients", new {id = client.ClientId});
+            return RedirectToAction("Index");
         }
         
         public ActionResult Delete(int id)

@@ -3,8 +3,9 @@
 }
 
 @using HairSalon.Models;
+@model List<HairSalon.Models.Stylist>
 
-<h1> Stylists: </h1>
+<h1 class="Title-Font">Stylists</h1>
 
 <div class="list-view row">
 
@@ -27,5 +28,9 @@
         <div class="list-view-col">
             @stylist.Specialty
         </div>
+        <div class="list-view-col">
+            
+        </div>
     }
 </div>
+
