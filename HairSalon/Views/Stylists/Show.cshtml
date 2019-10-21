@@ -4,6 +4,8 @@
 
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;
+<div class="page-title"></div>
+
 
 <div class="submit-table form-group">
     <div class="stylist-head">
@@ -27,11 +29,12 @@
                     {
                         <p>There are no clients for this Stylist</p>
                     }
-
+                    <p>
                     @foreach (Client client in @Model.Clients)
                     {
-                        <p>@(client.Name_First) @(client.Name_Last)</p>
+                        @(client.Name_First + " " + client.Name_Last)<br>
                     }
+                    </p>
             </div>
         </div>
         <div class="row">

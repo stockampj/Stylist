@@ -4,6 +4,8 @@
 @using HairSalon.Models
 @model HairSalon.Models.Stylist
 
+<div class="page-title"></div>
+
 @using(Html.BeginForm())
 {
   @Html.HiddenFor(model => model.StylistId, new {@class = "hidden"})

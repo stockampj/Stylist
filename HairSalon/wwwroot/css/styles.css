@@ -9,15 +9,17 @@ div#navbar {
   background: linear-gradient(90deg, rgba(255,255,255,0) 3%, rgba(78,78,78,.3) 15%, rgba(78,78,78,0.5) 49%, rgba(78,78,78,.3) 85%, rgba(255,255,255,0) 97%); 
   border-bottom: thin solid rgba(255,255,255,.4);
   padding: 5px;
+  overflow: hidden;
 }
 
-.nav-holder {
-  width: 70%;
-  min-width: 500px;
+
+.nav-p {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
-  overflow: hidden;
+  text-align: center;
+  width: 70%;
+  min-width: 600px;
 }
 
 .navbar-item {
@@ -39,7 +41,25 @@ div#navbar {
 }
 
 #navbar-spacer {
-  height: 80px;
+  height: 50px;
+}
+
+#title-spacer{
+  height: 100px;
+}
+
+.page-title {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-title-font {
+  float: right;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 5em;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  padding-right: 20px;
 }
 
 body {
@@ -62,6 +82,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 75%;
+  min-width: 450px;
+  min-height: 375px;
   background: linear-gradient(90deg, rgba(78,78,78,.3) 15%, rgba(78,78,78,0.5) 49%, rgba(78,78,78,.3) 85%);  
   border: thin solid rgba(255,255,255,.4);
   Padding: 1.5em;
@@ -126,6 +148,7 @@ select {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  min-height: 375px;
   background: linear-gradient(90deg, rgba(78,78,78,.3) 15%, rgba(78,78,78,0.5) 49%, rgba(78,78,78,.3) 85%);  
   border: solid thin rgba(255,255,255,.4);
   Padding: 1.5em;
@@ -170,12 +193,6 @@ a:hover {
   font-size: 1.5em;
 }
 
-.list-header {
-  float: right;
-  padding-right: 20px;
-  padding-bottom: 5px;
-}
-
 .error-message {
   display: block;
   margin-left: auto;
@@ -183,4 +200,89 @@ a:hover {
   font-size: 1.5em;
   font-weight: 700;
   color: rgb(71, 0, 0);
+}
+
+.splash {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+}
+
+
+.splash-background {
+  height: 448px;
+  width: 800px;
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -224px;
+  background-image: url(../img/purple-stars1.png);
+  background-position: center center;
+  background-size: cover;
+  -webkit-mask-image: url(../img/stacy1.svg);
+  mask-image: url(../img/stacy1.svg);
+  -webkit-mask-repeat: no-repeat;
+  opacity: .1;
+}
+
+.splash-background-home {
+  height: 448px;
+  width: 800px;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -224px;
+  background-image: url(../img/purple-stars1.png);
+  background-position: top;
+  background-size: cover;
+  -webkit-mask-image: url(../img/stacy1.svg);
+  mask-image: url(../img/stacy1.svg);
+  -webkit-mask-repeat: no-repeat;
+  opacity: .6;
+}
+
+.splash-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  height: 525px;
+  position: relative;
+}
+
+.Title-View {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -350px;
+  width: 700px;
+  background: linear-gradient(90deg, rgba(78,78,78,.2) 15%, rgba(78,78,78,0.7) 49%, rgba(78, 78, 78, 0.2) 85%);  
+  border: solid thin rgba(255,255,255,.4);
+  Padding: 1.5em;
+  box-shadow: 10px 10px 5px rgba(0,0,0,.3);
+  text-align: center;
+}
+
+.Title-Name {
+  font-size: 5em;
+  color: rgba(255,255,255, .8)
+}
+
+.Title-Tag-View {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Title-Tag {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: rgba(25, 25, 25, 0.7)
 }
